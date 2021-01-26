@@ -13,7 +13,7 @@ git clone https://github.com/Thinkful-Ed/starter-solving-problems-with-stacks-an
 Navigate to the root of the repository and install dependencies.
 
 ```bash
-npm i
+npm install
 ```
 
 To run the tests
@@ -24,7 +24,7 @@ npm test
 
 ## Solutions
 
-To view the sample solutions checkout the **Solution** branch.
+To view the solution to these problems, checkout the **solution** branch.
 
 ## Problems
 
@@ -32,3 +32,7 @@ To view the sample solutions checkout the **Solution** branch.
 - [Matching Parentheses](./src/parentheses)
 - [Infix to Postfix](./src/postfix)
 - [Connected Friends](./src/connected_friends)
+
+## License
+
+This project is [MIT Licensed](LICENSE)
