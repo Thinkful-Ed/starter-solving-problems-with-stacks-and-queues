@@ -1,0 +1,23 @@
+{
+  "name": "starter-solving-problems-with-stacks-and-queues",
+  "version": "1.0.0",
+  "description": "Sample problems and solutions for problem solving with stacks and queues",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thinkful-Ed/starter-solving-problems-with-stacks-and-queues.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thinkful-Ed/starter-solving-problems-with-stacks-and-queues/issues"
+  },
+  "homepage": "https://github.com/Thinkful-Ed/starter-solving-problems-with-stacks-and-queues#readme",
+  "dependencies": {
+    "jest": "^26.6.3"
+  }
+}
