@@ -2,7 +2,7 @@
 
 You work for a massive social network with many millions of users. You need to determine if two given users of the network are connected to each other.
 
-Users of the social network may "follow" each other but the relationship may not be mutual. That is, person A may follow person B but person B may not necessarily follow person A.
+Users of the social network may "follow" each other, but the relationship may not be mutual. That is, person A may follow person B but person B may not necessarily follow person A.
 
 Consider the diagrammatic representation of a part of the network below:
 
@@ -31,4 +31,4 @@ Internally, this network of users and their connections may be represented as an
 }
 ```
 
-Write a function that accepts a network object `G` and two users `s` and `r` and returns `true` if there is a path from `s` to `r`, false otherwise.
+Write a function that accepts a network object `graph` and two users `startUser` and `endUser` and returns `true` if there is a path from `startUser` to `endUser`, false otherwise.
