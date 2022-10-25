@@ -58,15 +58,17 @@ postfix("(((a + b) * (c - d))/(a - b) + (c / d))");
 module.exports = postfix;
 
 /*
-1. Declare a variable named `result` and initialize it to the empty string
-1. Iterate through each character in the expression ignoring spaces
-   1. If the current character is an operand, add it to the `result`
-   1. otherwise if it is an operator
+1. Declare a variable named `stack` and initialize it to a new stack
+2. Declare a variable named `result` and initialize it to an empty array
+3. Iterate through each character in the expression ignoring spaces
+   1. If the current character is ‘(‘, push it unto the stack.
+   2. Otherwise if the current character is ‘)’ then, start popping characters off the stack and add each character to the `result` until you find a ‘(‘. Do not add the parentheses to the `result`.
+   3. Otherwise if the current character is an operator,
       1. Look at the operator at the top of the stack
-      1. If the current operator has higher precedence than the operator on the top of the stack or if the stack is empty or the top of the stack is ‘(‘ then push the current operator unto the stack
-      1. otherwise, start popping operators off the stack until either you find an operator that is not higher or equal precedence to the current operator, or if you find a parenthesis. Each operator that is popped from the stack is added to the `result`. Push the current operator unto the stack.
-   1. Otherwise if the current character is ‘(‘, push it unto the stack.
-   1. Otherwise if the current character is ‘)’ then, start popping characters off the stack and add each character to the `result` until you find a ‘(‘. Do not put the parentheses on the `result`.
-1. Pop any remaining operators from the stack and place them on the `result`
-1. Return the `result`
+         1. If the stack is empty, or if the top of the stack is ‘(‘, or if the current operator has higher precedence than the operator on the top of the stack, then push the current operator unto the stack
+         2. Otherwise, start popping operators off the stack while the stack is not empty and the popped operator has higher or equal precedence to the current operator. Each poppoed operator is added to the `result`.
+         3. Push the current operator unto the stack.
+   4. If the current character is an operand, add it to the `result`
+4. Pop any remaining operators from the stack and add them to the `result`
+5. Return the `result` as a string
 */
